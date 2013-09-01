@@ -1,0 +1,9 @@
+[user]
+	email = chendahui007@gmail.com
+	name = holys
+[credential]
+	helper = cache --timeout=3600
+[color]
+    diff = auto
+    branch = auto
+    status = auto

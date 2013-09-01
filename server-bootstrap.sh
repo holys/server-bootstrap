@@ -80,4 +80,23 @@ fi
 source ~/.zshrc
 echo "Zsh setup done."
 
+# gitconfig
+if [ ! -e ~/.gitconfig ]
+then
+  cp gitconfig ~/.gitconfig
+fi
 
+# pip
+mkdir -p ~/.pip
+if [ ! -e ~/.pip/pip.conf ]
+then
+  cp pip.conf ~/.pip/pip.conf
+fi
+
+# Python
+curl -O http://python-distribute.org/distribute_setup.py
+python distribute_setup.py
+easy_install pip
+rm -f distribute*
+pip install virtualenv virtualenvwrapper ipython requests pytest\
+            yolk 

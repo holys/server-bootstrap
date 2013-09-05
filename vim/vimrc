@@ -31,7 +31,7 @@ set cursorline
 autocmd Syntax javascript set syntax=jquery
 
 " Auto Call flake8
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 
 " syntax support
 autocmd Syntax javascript set syntax=jquery   " JQuery syntax support

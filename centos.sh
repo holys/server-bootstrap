@@ -3,23 +3,24 @@
 # git, zsh, vim, tmux, python2.7, easy_install, pip,
 # mysql, ipython, nginx?, 
 # Install required libraries
-apt-get update
-apt-get upgrade --show-upgraded
+yum update
+yum upgrade 
 
-apt-get install --yes build-essential zlib1g zlib1g-dev libsqlite3-dev \
-                      libssl-dev libreadline6-dev libxml2-dev libpcre3-dev \
-                      libcurl4-openssl-dev libncurses5 curl htop tree axel \
-                      openvpn exuberant-ctags
+yum groupinstall “Development tools” -y
+
+
+yum install -y zlib-devel sqlite-devel readline-devel libxml2-devel libcurl-devel
+              
 
 # Install frequently-used softwares
-apt-get install --yes vim zsh tmux curl htop tree axel colordiff exuberant-ctags \
-                      tig
+yum install -y vim zsh  tree  
+                      
                       
 # Install Databases 
-apt-get install --yes sqlite3 mysql-server
+yum install -y  mysql-server 
 
 # Install less-frequently used softwares
-apt-get install --yes mercurial subversion unrar-free unzip
+yum install -y mercurial  
 
 # Setup Vim
 if [ ! -e ~/.vim ]
@@ -38,7 +39,7 @@ ln -s ~/.vim/vimrc ~/.vimrc
 
 if [ ! -e ~/.vim/bundle/vundle ]
 then
-   git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+   git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 fi
 
 echo "Going to install vim plugins"

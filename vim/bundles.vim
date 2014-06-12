@@ -15,7 +15,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'garbas/vim-snipmate'
 Bundle 'ervandew/supertab'
 Bundle 'honza/vim-snippets'
-Bundle 'mattn/zencoding-vim'
+Bundle 'mattn/emmet-vim'
 " snipmate dependencies
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
@@ -24,7 +24,6 @@ Bundle 'tomtom/tlib_vim'
 " Surrounding Operation
 "-----------------------
 Bundle 'Raimondi/delimitMate'
-Bundle 'tsaleh/vim-matchit'
 Bundle 'tpope/vim-surround'
 
 "--------------
